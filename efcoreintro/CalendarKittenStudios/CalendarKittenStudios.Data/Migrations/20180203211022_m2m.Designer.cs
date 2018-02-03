@@ -11,9 +11,10 @@ using System;
 namespace CalendarKittenStudios.Data.Migrations
 {
     [DbContext(typeof(CKSContext))]
-    partial class CKSContextModelSnapshot : ModelSnapshot
+    [Migration("20180203211022_m2m")]
+    partial class m2m
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
