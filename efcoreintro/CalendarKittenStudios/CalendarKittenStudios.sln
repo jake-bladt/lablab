@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarKittenStudios.Domain", "CalendarKittenStudios.Domain\CalendarKittenStudios.Domain.csproj", "{7519F415-E982-40E1-BD72-D4F3D6BE6AFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7519F415-E982-40E1-BD72-D4F3D6BE6AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7519F415-E982-40E1-BD72-D4F3D6BE6AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7519F415-E982-40E1-BD72-D4F3D6BE6AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7519F415-E982-40E1-BD72-D4F3D6BE6AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED09BB97-9BD5-4C0C-913A-A62347AB0119}
+	EndGlobalSection
+EndGlobal
