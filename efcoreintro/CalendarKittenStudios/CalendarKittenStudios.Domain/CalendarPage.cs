@@ -10,6 +10,6 @@ namespace CalendarKittenStudios.Domain
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public Photographer Photographer { get; set; }
-        public List<Kitten> Kittens { get; set; }
+        public List<ModelingEngagement> Bookings { get; set; }
     }
 }
