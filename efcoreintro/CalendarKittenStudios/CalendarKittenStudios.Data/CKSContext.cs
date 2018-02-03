@@ -13,5 +13,12 @@ namespace CalendarKittenStudios.Data
         {
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=cks0;Integrated Security=True;Pooling=False");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ModelingEngagement>()
+                .HasKey(e => new { e.KittenID, e.CalendarPageID });
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
