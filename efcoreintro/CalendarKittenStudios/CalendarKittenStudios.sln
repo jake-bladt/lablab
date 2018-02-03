@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarKittenStudios.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarKittenStudios.Data", "CalendarKittenStudios.Data\CalendarKittenStudios.Data.csproj", "{627DB6EB-3670-44FA-8ED2-A8604ABCC0C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cks", "cks\cks.csproj", "{BDAF1076-A6D2-4BA2-AE82-5D71E52DC082}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{627DB6EB-3670-44FA-8ED2-A8604ABCC0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{627DB6EB-3670-44FA-8ED2-A8604ABCC0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{627DB6EB-3670-44FA-8ED2-A8604ABCC0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDAF1076-A6D2-4BA2-AE82-5D71E52DC082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDAF1076-A6D2-4BA2-AE82-5D71E52DC082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDAF1076-A6D2-4BA2-AE82-5D71E52DC082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDAF1076-A6D2-4BA2-AE82-5D71E52DC082}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

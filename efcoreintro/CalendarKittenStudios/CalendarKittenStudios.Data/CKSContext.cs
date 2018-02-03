@@ -1,10 +1,5 @@
-﻿using CalendarKittenStudios.Domain;
-
-using Microsoft.EntityFrameworkCore;
-
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
+using CalendarKittenStudios.Domain;
 
 namespace CalendarKittenStudios.Data
 {
@@ -13,5 +8,10 @@ namespace CalendarKittenStudios.Data
         public DbSet<Calendar> Calenders { get; set; }
         public DbSet<Kitten> Kittens { get; set; }
         public DbSet<Photographer> Photographers { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=cks0;Integrated Security=True;Pooling=False");
+        }
     }
 }
