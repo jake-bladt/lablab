@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="NationalAudubon.Middleware.Authentication">
+      <HintPath>..\..\..\..\Audubon\NationalAudubon.Middleware.Authentication\NationalAudubon.Middleware.Authentication\bin\Debug\NationalAudubon.Middleware.Authentication.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
