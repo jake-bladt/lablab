@@ -1,0 +1,8 @@
+C:\code\lablab\htmlagilitypack\scraper\scraper\bin\Debug\netcoreapp2.0\scraper.deps.json
+C:\code\lablab\htmlagilitypack\scraper\scraper\bin\Debug\netcoreapp2.0\scraper.runtimeconfig.json
+C:\code\lablab\htmlagilitypack\scraper\scraper\bin\Debug\netcoreapp2.0\scraper.runtimeconfig.dev.json
+C:\code\lablab\htmlagilitypack\scraper\scraper\bin\Debug\netcoreapp2.0\scraper.dll
+C:\code\lablab\htmlagilitypack\scraper\scraper\obj\Debug\netcoreapp2.0\scraper.csprojResolveAssemblyReference.cache
+C:\code\lablab\htmlagilitypack\scraper\scraper\obj\Debug\netcoreapp2.0\scraper.csproj.CoreCompileInputs.cache
+C:\code\lablab\htmlagilitypack\scraper\scraper\obj\Debug\netcoreapp2.0\scraper.AssemblyInfoInputs.cache
+C:\code\lablab\htmlagilitypack\scraper\scraper\obj\Debug\netcoreapp2.0\scraper.AssemblyInfo.cs
