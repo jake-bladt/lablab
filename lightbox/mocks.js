@@ -1,4 +1,5 @@
 let mockViewModel = {
+  title: '2018 fantasy baseball projections',
   batters: [
     { name: 'Mike Trout', team: 'LAA', position: 'OF', 
       games: 156, atBats: 548, battingAverage: 0.308, homeRuns: 39, runsBattedIn: 97, runs: 119, netStolenBases: 21 },
