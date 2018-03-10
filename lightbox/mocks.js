@@ -1,6 +1,6 @@
 let mockViewModel = {
   title: '2018 fantasy baseball projections',
-  batters: [
+  batters: ko.observableArray([
     { name: 'Mike Trout', team: 'LAA', position: 'OF', 
       games: 156, atBats: 548, battingAverage: 0.308, homeRuns: 39, runsBattedIn: 97, runs: 119, netStolenBases: 21 },
     { name: 'Trea Turner', team: 'WAS', position: 'SS', 
@@ -20,5 +20,6 @@ let mockViewModel = {
     { name: 'Giancarlo Stanton', team: 'NYY', position: 'OF', 
       games: 150, atBats: 552, battingAverage: 0.268, homeRuns: 49, runsBattedIn: 113, runs: 101, netStolenBases: 0 },
     { name: 'Aaron Judge', team: 'NYY', position: 'OF', injuryType: 'DTD', injuryLocation: 'shoulder', 
-      games: 147, atBats: 525, battingAverage: 0.270, homeRuns: 42, runsBattedIn: 106, runs: 111, netStolenBases: 3 }  ]
+      games: 147, atBats: 525, battingAverage: 0.270, homeRuns: 42, runsBattedIn: 106, runs: 111, netStolenBases: 3 }  
+  ])
 }
