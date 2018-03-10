@@ -8,5 +8,37 @@
   </head>
   <body>
     <h1 data-bind='text:title'>Baseball</h1>
+    <table id='playerStatsTable'>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Team</td>
+          <td>Pos</td>
+          <td>G</td>
+          <td>AB</td>
+          <td>BA</td>
+          <td>HR</td>
+          <td>RBI</td>
+          <td>R</td>
+          <td>NSB</td>
+        </tr>
+      </thead>
+      <tbody data-bind="template: { name: 'playerRowTempl', foreach: batters } ">
+      </tbody>
+    </table>
+    <script id='playerRowTempl' type='text/html'>
+      <tr>
+        <td data-bind='text: name'></td>
+        <td data-bind='text: team'></td>
+        <td data-bind='text: position'></td>
+        <td data-bind='text: games'></td>
+        <td data-bind='text: atBats'></td>
+        <td data-bind='text: battingAverage'></td>
+        <td data-bind='text: homeRuns'></td>
+        <td data-bind='text: runsBattedIn'></td>
+        <td data-bind='text: runs'></td>
+        <td data-bind='text: netStolenBases'></td>
+      </tr>
+    </script>
   </body>
 </html>
