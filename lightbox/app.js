@@ -3,9 +3,8 @@
 
   // Document ready
   $(() => {
-    console.log('App script loaded.');
     app.viewModel = mockViewModel;
-    ko.applyBindings(viewModel);
+    ko.applyBindings(app.viewModel);
   });
 
 })(jQuery, ko);

@@ -19,6 +19,6 @@ let mockViewModel = {
       games: 154, atBats: 617, battingAverage: 0.323, homeRuns: 31, runsBattedIn: 89, runs: 121, netStolenBases: 6 },
     { name: 'Giancarlo Stanton', team: 'NYY', position: 'OF', 
       games: 150, atBats: 552, battingAverage: 0.268, homeRuns: 49, runsBattedIn: 113, runs: 101, netStolenBases: 0 },
-    { name: 'Aaron Judge', team: 'NYY', position: 'OF', injuryType: 'DTD', injuryLocation: 'shoulder' 
+    { name: 'Aaron Judge', team: 'NYY', position: 'OF', injuryType: 'DTD', injuryLocation: 'shoulder', 
       games: 147, atBats: 525, battingAverage: 0.270, homeRuns: 42, runsBattedIn: 106, runs: 111, netStolenBases: 3 }  ]
 }
