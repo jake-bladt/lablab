@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script type="text/javascript" src='knockout.js'></script>
     <script type="text/javascript" src='mocks.js'></script>
@@ -14,8 +15,8 @@
   </head>
   <body>
     <div class='container'>
-      <h1 data-bind='text:title'>Baseball</h1>
-      <table id='playerStatsTable'>
+      <h1 class='pageHead' data-bind='text:title'>Baseball</h1>
+      <table id='playerStatsTable' class='table'>
         <thead>
           <tr>
             <td>Name</td>
