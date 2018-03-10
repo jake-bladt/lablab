@@ -13,25 +13,28 @@
     <title>Projection Manager</title>    
   </head>
   <body>
-    <h1 data-bind='text:title'>Baseball</h1>
-    <table id='playerStatsTable'>
-      <thead>
-        <tr>
-          <td>Name</td>
-          <td>Team</td>
-          <td>Pos</td>
-          <td>G</td>
-          <td>AB</td>
-          <td>BA</td>
-          <td>HR</td>
-          <td>RBI</td>
-          <td>R</td>
-          <td>NSB</td>
-        </tr>
-      </thead>
-      <tbody data-bind="template: { name: 'playerRowTempl', foreach: batters } ">
-      </tbody>
-    </table>
+    <div class='container'>
+      <h1 data-bind='text:title'>Baseball</h1>
+      <table id='playerStatsTable'>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Team</td>
+            <td>Pos</td>
+            <td>G</td>
+            <td>AB</td>
+            <td>BA</td>
+            <td>HR</td>
+            <td>RBI</td>
+            <td>R</td>
+            <td>NSB</td>
+          </tr>
+        </thead>
+        <tbody data-bind="template: { name: 'playerRowTempl', foreach: batters } ">
+        </tbody>
+      </table>
+    </div>
+
     <script id='playerRowTempl' type='text/html'>
       <tr>
         <td data-bind='text: name'></td>
