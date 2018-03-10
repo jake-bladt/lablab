@@ -16,8 +16,8 @@
   <body>
     <div class='container'>
       <h1 class='pageHead' data-bind='text:title'>Baseball</h1>
-      <table id='playerStatsTable' class='table'>
-        <thead>
+      <table id='playerStatsTable' class='table table-striped table-bordered'>
+        <thead class="thead-dark">
           <tr>
             <td>Name</td>
             <td>Team</td>
@@ -29,6 +29,7 @@
             <td>RBI</td>
             <td>R</td>
             <td>NSB</td>
+            <td></td>
           </tr>
         </thead>
         <tbody data-bind="template: { name: 'playerRowTempl', foreach: batters } ">
@@ -48,6 +49,9 @@
         <td data-bind='text: runsBattedIn'></td>
         <td data-bind='text: runs'></td>
         <td data-bind='text: netStolenBases'></td>
+        <td>
+          <button class='btn btn-dark'>Edit</button>
+        </td>
       </tr>
     </script>
   </body>
