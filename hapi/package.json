@@ -1,0 +1,23 @@
+{
+  "name": "hapitest",
+  "version": "1.0.0",
+  "description": "A sandbox for testing hapi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jake-bladt/lablab.git"
+  },
+  "keywords": [
+    "hapi",
+    "api"
+  ],
+  "author": "Jake Bladt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jake-bladt/lablab/issues"
+  },
+  "homepage": "https://github.com/jake-bladt/lablab#readme"
+}
