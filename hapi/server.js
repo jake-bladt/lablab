@@ -19,10 +19,10 @@ server.route({
 });
 
 // Start the server
-async function start() {
+function start() {
 
     try {
-        await server.start();
+        server.start();
     }
     catch (err) {
         console.log(err);
