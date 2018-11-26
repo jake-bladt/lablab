@@ -9,3 +9,12 @@ C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\Fil
 C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.csproj.CoreCompileInputs.cache
 C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.AssemblyInfoInputs.cache
 C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.AssemblyInfo.cs
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\NewFolder\kitten1.jpg
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\NewFolder\kitten2.jpg
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\NewFolder\lovecat.png
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\FileHashes.XTests.pdb
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\FileHashes.dll
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\FileHashes.pdb
+C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.csproj.CopyComplete
+C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.dll
+C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.pdb
