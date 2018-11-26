@@ -18,13 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="NewFolder\kitten1.jpg">
+    <None Update="SampleFiles\kitten1.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="NewFolder\kitten2.jpg">
+    <None Update="SampleFiles\kitten2.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="NewFolder\lovecat.png">
+    <None Update="SampleFiles\lovecat.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
