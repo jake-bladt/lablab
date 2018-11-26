@@ -1,0 +1,8 @@
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.Test.deps.json
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.Test.dll
+C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.csprojAssemblyReference.cache
+C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.csproj.CoreCompileInputs.cache
+C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.AssemblyInfoInputs.cache
+C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.AssemblyInfo.cs
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.Test.runtimeconfig.json
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.Test.runtimeconfig.dev.json

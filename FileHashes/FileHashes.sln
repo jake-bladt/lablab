@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHashes", "FileHashes\FileHashes.csproj", "{98F3950E-78D6-47DD-BAFA-5912725B9735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHashes.Test", "FileHashes.Test\FileHashes.Test.csproj", "{913E2B0D-984C-4FFA-AF2B-6BA42436145D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98F3950E-78D6-47DD-BAFA-5912725B9735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F3950E-78D6-47DD-BAFA-5912725B9735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F3950E-78D6-47DD-BAFA-5912725B9735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F3950E-78D6-47DD-BAFA-5912725B9735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913E2B0D-984C-4FFA-AF2B-6BA42436145D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913E2B0D-984C-4FFA-AF2B-6BA42436145D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913E2B0D-984C-4FFA-AF2B-6BA42436145D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913E2B0D-984C-4FFA-AF2B-6BA42436145D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A917D6F8-24D0-4CD3-8536-06C48597331A}
+	EndGlobalSection
+EndGlobal
