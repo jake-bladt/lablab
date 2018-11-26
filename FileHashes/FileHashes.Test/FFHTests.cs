@@ -1,8 +1,11 @@
 ﻿using System;
 
+using Shouldly;
+using Xunit;
+
 namespace FileHashes.Test
 {
-    public class Class1
+    public class FFHTests
     {
     }
 }
