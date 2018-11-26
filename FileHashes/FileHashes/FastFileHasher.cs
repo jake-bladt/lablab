@@ -7,6 +7,18 @@ namespace FileHashes
 {
     public class FastFileHasher : IDisposable
     {
+        public static string ToHexString(byte[] bytes)
+        {
+            var builder = new StringBuilder();
+            foreach (var b in bytes)
+            {
+                builder.Append(b.ToString("x2").ToLower());
+            }
+
+            return builder.ToString();
+        }
+
+
         protected HashAlgorithm _algo;
 
         public FastFileHasher(HashAlgorithm algo = null)
