@@ -1,0 +1,7 @@
+version: "3"
+services:
+  redis:
+    image: "jakebladt/nanolnz-restserver"
+    volumes:
+     - ./to_mount:/mounted
+
