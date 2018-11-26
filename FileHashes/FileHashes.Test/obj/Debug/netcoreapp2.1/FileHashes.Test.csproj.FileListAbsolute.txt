@@ -6,3 +6,12 @@ C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileH
 C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.AssemblyInfo.cs
 C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.Test.runtimeconfig.json
 C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.Test.runtimeconfig.dev.json
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\SampleFiles\kitten1.jpg
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\SampleFiles\kitten2.jpg
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\SampleFiles\lovecat.png
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.Test.pdb
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.dll
+C:\code\external\lablab\FileHashes\FileHashes.Test\bin\Debug\netcoreapp2.1\FileHashes.pdb
+C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.csproj.CopyComplete
+C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.dll
+C:\code\external\lablab\FileHashes\FileHashes.Test\obj\Debug\netcoreapp2.1\FileHashes.Test.pdb

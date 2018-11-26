@@ -1,0 +1,11 @@
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\FileHashes.XTests.deps.json
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\FileHashes.XTests.runtimeconfig.json
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\FileHashes.XTests.runtimeconfig.dev.json
+C:\code\external\lablab\FileHashes\FileHashes.XTests\bin\Debug\netcoreapp2.1\FileHashes.XTests.dll
+C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.csprojAssemblyReference.cache
+C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.csproj.CoreCompileInputs.cache
+C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.AssemblyInfoInputs.cache
+C:\code\external\lablab\FileHashes\FileHashes.XTests\obj\Debug\netcoreapp2.1\FileHashes.XTests.AssemblyInfo.cs
