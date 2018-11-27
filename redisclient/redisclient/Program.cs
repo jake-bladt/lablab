@@ -46,6 +46,11 @@ namespace redisclient
                 Card tc2 = typedDeck.Pop();
                 Console.WriteLine($"You cards are {tc1}{tc2}.");
 
+                // var sub = client.CreateSubscription();
+                // sub.OnMessage = (c, m) => Console.WriteLine($"Got message: {m}");
+                // sub.SubscribeToChannels("poker"); // blocking call
+                // client.PublishMessage("poker", "Shuffle up and deal!");
+
                 Console.ReadLine();
             }
         }
