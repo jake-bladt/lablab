@@ -24,7 +24,7 @@ namespace redisclient
                 var faces = "A23456789TJQK";
                 var suits = "cdhs";
 
-                var dtStamp = DateTime.Now.ToString("yyyyMMddhhmmss");
+                var dtStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
                 var deck = client.Lists[$"sampleredisclient:deck:{dtStamp}"];
                 var cards = new List<String>();
                 var rng = new Random();
