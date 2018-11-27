@@ -21,18 +21,15 @@ namespace redisclient
                 //var sampleMessage = client.Get<String>("sampleredisclient:messages:1");
                 //Console.WriteLine($"message: {sampleMessage}");
 
-                var faces = "A23456789TJQK";
-                var suits = "cdhs";
+                var faces = "A23456789TJQK".ToCharArray().ToList();
+                var suits = "cdhs".ToCharArray().ToList();
 
                 var dtStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
                 var deck = client.Lists[$"sampleredisclient:deck:{dtStamp}"];
                 var cards = new List<String>();
                 var rng = new Random();
 
-                faces.ToCharArray().ToList().ForEach((f) =>
-                {
-                    suits.ToCharArray().ToList().ForEach((s) => cards.Add($"{f}{s}"));
-                });
+                faces.ForEach((f) => suits.ForEach((s) => cards.Add($"{f}{s}")));
 
                 deck.Clear();
                 cards.OrderBy(x => rng.NextDouble()).Each(c => deck.Push(c));
