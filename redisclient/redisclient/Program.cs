@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using ServiceStack;
 using ServiceStack.Redis;
 
 namespace redisclient
@@ -23,28 +24,21 @@ namespace redisclient
                 var faces = "A23456789TJQK";
                 var suits = "cdhs";
 
-                var cards = client.Lists["sampleredisclient:deck:1"];
+                var dtStamp = DateTime.Now.ToString("yyyyMMddhhmmss");
+                var deck = client.Lists[$"sampleredisclient:deck:{dtStamp}"];
+                var cards = new List<String>();
                 var rng = new Random();
 
-                cards.Clear();
                 faces.ToCharArray().ToList().ForEach((f) =>
                 {
-                    suits.ToCharArray().ToList().ForEach((s) =>
-                    {
-                        var topOrBottom = rng.NextDouble();
-                        if (topOrBottom > 0.5)
-                        {
-                            cards.Enqueue($"{f}{s}");
-                        }
-                        else
-                        {
-                            cards.Push($"{f}{s}");
-                        }
-                    });
+                    suits.ToCharArray().ToList().ForEach((s) => cards.Add($"{f}{s}"));
                 });
 
-                var card1 = cards.Pop();
-                var card2 = cards.Pop();
+                deck.Clear();
+                cards.OrderBy(x => rng.NextDouble()).Each(c => deck.Push(c));
+
+                var card1 = deck.Pop();
+                var card2 = deck.Pop();
                 Console.WriteLine($"You cards are {card1}{card2}.");
 
                 Console.ReadLine();
