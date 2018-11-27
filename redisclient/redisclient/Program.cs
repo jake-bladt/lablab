@@ -38,6 +38,14 @@ namespace redisclient
                 var card2 = deck.Pop();
                 Console.WriteLine($"You cards are {card1}{card2}.");
 
+                var cardClient = client.As<Card>();
+                var typedDeck = cardClient.Lists[$"sampleredisclient:typeddeck:{dtStamp}"];
+                cards.OrderBy(x => rng.NextDouble()).Each(c => typedDeck.Push(new Card(c)));
+
+                Card tc1 = typedDeck.Pop();
+                Card tc2 = typedDeck.Pop();
+                Console.WriteLine($"You cards are {tc1}{tc2}.");
+
                 Console.ReadLine();
             }
         }
