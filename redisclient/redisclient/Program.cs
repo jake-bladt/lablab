@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 
 using ServiceStack.Redis;
-using ServiceStack.Templates;
 
 namespace redisclient
 {
@@ -25,14 +24,28 @@ namespace redisclient
                 var suits = "cdhs";
 
                 var cards = client.Lists["sampleredisclient:deck:1"];
+                var rng = new Random();
+
                 cards.Clear();
                 faces.ToCharArray().ToList().ForEach((f) =>
                 {
                     suits.ToCharArray().ToList().ForEach((s) =>
                     {
-                        cards.Add($"{f}{s}");
+                        var topOrBottom = rng.NextDouble();
+                        if (topOrBottom > 0.5)
+                        {
+                            cards.Enqueue($"{f}{s}");
+                        }
+                        else
+                        {
+                            cards.Push($"{f}{s}");
+                        }
                     });
                 });
+
+                var card1 = cards.Pop();
+                var card2 = cards.Pop();
+                Console.WriteLine($"You cards are {card1}{card2}.");
 
                 Console.ReadLine();
             }
