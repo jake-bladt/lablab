@@ -7,3 +7,5 @@ const statisticFinder = {
       }
   }
 };
+
+module.exports = { statisticFinder };
