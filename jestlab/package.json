@@ -1,0 +1,10 @@
+{
+  "name": "jestlab",
+  "version": "1.0.0",
+  "description": "A sandbox for writing Jest tests.",
+  "main": "baseball.js",
+  "repository": "https://github.com/jake-bladt/lablab.git",
+  "author": "Jake Bladt",
+  "license": "MIT",
+  "private": false
+}
