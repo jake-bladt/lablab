@@ -6,7 +6,7 @@ test('reads stats that are already present', () => {
     HR: 19
   };
 
-  expect(baseball.statisticFinder.getStatistic('BA', player)).toBe(0.3);
+  expect(baseball.statisticFinder.getStatistic('BA', player)).toBeCloseTo(0.3);
   expect(baseball.statisticFinder.getStatistic('HR', player)).toBe(19);
 
 });
