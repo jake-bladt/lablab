@@ -6,6 +6,6 @@ function _compareCaseInsensitive(a, b) {
                     return 0;
                 }
 
-console.log(_compareCaseInsensitive("SAML", "saml");
-console.log(_compareCaseInsensitive("Jake", "bake");
-console.log(_compareCaseInsensitive("Jake", "wake");
+console.log(_compareCaseInsensitive("SAML", "saml"));
+console.log(_compareCaseInsensitive("Jake", "bake"));
+console.log(_compareCaseInsensitive("Jake", "wake"));
