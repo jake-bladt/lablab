@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { ValuationsComponent } from './valuations/valuations.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ValuationsComponent
   ],
   imports: [
     BrowserModule,
