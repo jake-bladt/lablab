@@ -6,5 +6,4 @@ function doNot(fn) {
     }
 }
 
-
 doNot(() => console.log('Hello World!')).unless(!false);
