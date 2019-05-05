@@ -1,1 +1,1 @@
-print("done")
+print("aj".isalpha())
