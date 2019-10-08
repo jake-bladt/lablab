@@ -1,0 +1,9 @@
+D:\code\lablab\fsharp\002-fromvs\hello\hello\bin\Debug\netcoreapp2.1\hello.deps.json
+D:\code\lablab\fsharp\002-fromvs\hello\hello\bin\Debug\netcoreapp2.1\hello.runtimeconfig.json
+D:\code\lablab\fsharp\002-fromvs\hello\hello\bin\Debug\netcoreapp2.1\hello.runtimeconfig.dev.json
+D:\code\lablab\fsharp\002-fromvs\hello\hello\bin\Debug\netcoreapp2.1\hello.dll
+D:\code\lablab\fsharp\002-fromvs\hello\hello\bin\Debug\netcoreapp2.1\hello.pdb
+D:\code\lablab\fsharp\002-fromvs\hello\hello\obj\Debug\netcoreapp2.1\hello.AssemblyInfoInputs.cache
+D:\code\lablab\fsharp\002-fromvs\hello\hello\obj\Debug\netcoreapp2.1\hello.AssemblyInfo.fs
+D:\code\lablab\fsharp\002-fromvs\hello\hello\obj\Debug\netcoreapp2.1\hello.dll
+D:\code\lablab\fsharp\002-fromvs\hello\hello\obj\Debug\netcoreapp2.1\hello.pdb
