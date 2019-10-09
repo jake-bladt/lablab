@@ -1,0 +1,10 @@
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\bin\Debug\netcoreapp2.2\ftunctypes.deps.json
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\bin\Debug\netcoreapp2.2\ftunctypes.runtimeconfig.json
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\bin\Debug\netcoreapp2.2\ftunctypes.runtimeconfig.dev.json
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\bin\Debug\netcoreapp2.2\ftunctypes.dll
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\bin\Debug\netcoreapp2.2\ftunctypes.pdb
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\obj\Debug\netcoreapp2.2\ftunctypes.fsprojAssemblyReference.cache
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\obj\Debug\netcoreapp2.2\ftunctypes.AssemblyInfoInputs.cache
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\obj\Debug\netcoreapp2.2\ftunctypes.AssemblyInfo.fs
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\obj\Debug\netcoreapp2.2\ftunctypes.dll
+E:\code\lablab\fsharp\004-functypes\ftunctypes\ftunctypes\obj\Debug\netcoreapp2.2\ftunctypes.pdb
