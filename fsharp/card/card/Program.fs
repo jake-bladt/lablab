@@ -18,10 +18,11 @@ type Face =
     | King=13 
     | Ace=14 
 
+[<AllowNullLiteral>]
 type Card(face: Face, suit: Suit) =
     let SuitNames = [ "any", "clubs", "diamonds", "hearts", "spades" ]
     let FaceNames = [ "any", "any", "two", "three", "four", "five", "six",
-        "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace" ]
+                      "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace" ]
     
     member this.CardFace = face
     member this.CardSuit = suit
@@ -49,5 +50,6 @@ let CardParser str =
 
 [<EntryPoint>]
 let main argv =
-    printfn "Hello World from F#!"
-    0 // return an integer exit code
+    let card = fst(CardParser argv.[0])
+    printfn card.LongName
+    0
