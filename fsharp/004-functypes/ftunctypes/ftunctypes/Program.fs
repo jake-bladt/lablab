@@ -23,7 +23,7 @@ let main argv =
     let f = [1; 2; 3; 4; 5; 6; 7; 8] |> 
         List.map (fun x -> x * x) |>
         List.sum |>
-        mult 10
+        (*) 10
     sprintf "List ops: %d" f |> Console.WriteLine
 
     let inline (=^..^=) x y = sprintf "%d cats and %d kittens" x y

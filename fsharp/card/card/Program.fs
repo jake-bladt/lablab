@@ -1,4 +1,5 @@
 ﻿open System
+open Microsoft.FSharp.Collections
 
 type Suit = Clubs=1 | Diamonds=2 | Hearts=3 | Spades=4
 
@@ -26,7 +27,25 @@ type Card(face: Face, suit: Suit) =
     member this.CardSuit = suit
 
     member this.LongName() =
-        printf("%s of %s", FaceNames.[this.Face], SuitNames.[this.Suit])
+        printf "%s of %s", FaceNames.[int this.CardFace], SuitNames.[int this.CardSuit]
+
+let CardParser str = 
+    
+    let suits = "cdhs"
+    let faces = "23456789TJQKA"
+
+    if String.IsNullOrEmpty str || str.Length < 2 then
+        (null, str)
+    else
+        let faceIndex = faces.IndexOf str.[0]
+        let suitIndex = suits.IndexOf str.[1]
+
+        if faceIndex = -1 || suitIndex = -1 then
+            (null, str)
+        else
+            let theFace:Face = enum (faceIndex + 2)
+            let theSuit:Suit = enum (suitIndex + 1)
+            (new Card(theFace, theSuit), str.[2..])
 
 [<EntryPoint>]
 let main argv =
