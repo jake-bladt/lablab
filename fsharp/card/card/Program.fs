@@ -34,7 +34,7 @@ let CardParser str =
     let suits = "cdhs"
     let faces = "23456789TJQKA"
 
-    if String.IsNullOrEmpty str || str.Length < 2 then
+    if str.Length < 2 then
         (null, str)
     else
         let faceIndex = faces.IndexOf str.[0]
