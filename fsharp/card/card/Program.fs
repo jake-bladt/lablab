@@ -20,9 +20,9 @@ type Face =
 
 [<AllowNullLiteral>]
 type Card(face: Face, suit: Suit) =
-    let SuitNames = [ "any", "clubs", "diamonds", "hearts", "spades" ]
-    let FaceNames = [ "any", "any", "two", "three", "four", "five", "six",
-                      "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace" ]
+    let SuitNames = [ "any"; "clubs"; "diamonds"; "hearts"; "spades" ]
+    let FaceNames = [ "any"; "any"; "two"; "three"; "four"; "five"; "six";
+                      "seven"; "eight"; "nine"; "ten"; "jack"; "queen"; "king"; "ace" ]
     
     member this.CardFace = face
     member this.CardSuit = suit
@@ -51,5 +51,6 @@ let CardParser str =
 [<EntryPoint>]
 let main argv =
     let card = fst(CardParser argv.[0])
-    printfn card.LongName
+    let cardName =  if card = null then String.Empty else card.LongName()
+    printfn cardName
     0
