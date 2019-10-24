@@ -3,8 +3,8 @@
 type Suit = Clubs=1 | Diamonds=2 | Hearts=3 | Spades=4
 
 type Face = 
-    Deuce = 2  |
-    Trey  = 3  |
+    Deuce=2 |
+    Trey=3  |
     Four  = 4  |
     Five  = 5  |
     Six   = 6  |
@@ -17,7 +17,7 @@ type Face =
     King  = 13 |
     Ace   = 14 
 
-type Card(face, suit) =
+type Card(Face face, Suit suit) =
     member this.Face = face
     member this.Suit = suit
 
