@@ -7,12 +7,35 @@
 
 open System
 open System.IO
+open System.Text
 
-let usage = 
+let usage() = 
     printfn "Usage: gvaldir <election directory path>"
+    1
 
+let dirDne d =
+    printfn "Directory %s does not exist" d
+    1
+
+let join arr:Array joiner:String =
+    let ret = new StringBuilder()
+
+    ret.ToString()
+
+let electionEntryParse fileName:String =
+    let stripped = fileName.ToString().Replace(".jpg", String.Empty)
+    let parts = stripped.Split '-'
+    (int parts.[0], parts.[1..])
+    
 [<EntryPoint>]
 let main argv =
-    
-    printfn "Hello World from F#!"
-    0 // return an integer exit code
+    if argv.Length < 1 then
+        usage()
+    else
+        let path = argv.[0]
+        if Directory.Exists(path) then
+            let pathDI = new DirectoryInfo(path)
+            let electionFiles = pathDI.GetFiles "*.jpg"
+            0
+        else
+            dirDne path
