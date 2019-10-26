@@ -23,12 +23,12 @@ type Card(face: Face, suit: Suit) =
     let SuitNames = [| "any"; "clubs"; "diamonds"; "hearts"; "spades" |]
     let FaceNames = [| "any"; "any"; "two"; "three"; "four"; "five"; "six";
                       "seven"; "eight"; "nine"; "ten"; "jack"; "queen"; "king"; "ace" |]
-    
+     
     member this.CardFace = face
     member this.CardSuit = suit
 
     member this.LongName() =
-        printf "%s of %s", FaceNames.[int this.CardFace], SuitNames.[int this.CardSuit]
+        sprintf "%s of %s" FaceNames.[int this.CardFace] SuitNames.[int this.CardSuit]
 
 let CardParser str = 
     
@@ -52,5 +52,5 @@ let CardParser str =
 let main argv =
     let card = fst(CardParser argv.[0])
     let cardName =  if card = null then String.Empty else card.LongName()
-    printfn cardName
+    printfn "%s" cardName
     0
