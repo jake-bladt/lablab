@@ -26,7 +26,7 @@ let stripExt fileName =
     fileName.ToString().Replace(".jpg", String.Empty)
 
 let electionEntryParse fileName:String =
-    let parts = stripped.Split '-'
+    let parts = fileName.ToString().Split '-'
     (int parts.[0], parts.[1..])
     
 [<EntryPoint>]
@@ -37,8 +37,8 @@ let main argv =
         let path = argv.[0]
         if Directory.Exists(path) then
             let pathDI = new DirectoryInfo(path)
-            let electionFiles = pathDI.GetFiles "*.jpg"
-            let 
+            let parsed = pathDI.GetFiles "*.jpg" |>
+                Array.map f -> stripExt f                
             0
         else
             dirDne path
