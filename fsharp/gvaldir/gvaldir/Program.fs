@@ -17,13 +17,15 @@ let dirDne d =
     printfn "Directory %s does not exist" d
     1
 
-let join arr:Array joiner:String =
+let join arr joiner =
     let ret = new StringBuilder()
+    0
+    // ret.ToString()
 
-    ret.ToString()
+let stripExt fileName = 
+    fileName.ToString().Replace(".jpg", String.Empty)
 
 let electionEntryParse fileName:String =
-    let stripped = fileName.ToString().Replace(".jpg", String.Empty)
     let parts = stripped.Split '-'
     (int parts.[0], parts.[1..])
     
@@ -36,6 +38,7 @@ let main argv =
         if Directory.Exists(path) then
             let pathDI = new DirectoryInfo(path)
             let electionFiles = pathDI.GetFiles "*.jpg"
+            let 
             0
         else
             dirDne path
