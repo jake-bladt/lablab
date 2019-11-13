@@ -10,9 +10,9 @@ using Newtonsoft.Json;
 
 namespace SandboxAAS
 {
-    public static class Function1
+    public static class Sandbox
     {
-        [FunctionName("Function1")]
+        [FunctionName("Sandbox")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
