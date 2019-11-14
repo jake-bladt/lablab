@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -14,25 +14,29 @@ using Newtonsoft.Json;
 
 namespace SandboxAAS
 {
-    public static class Sandbox
+    public static class Cats
     {
-        [FunctionName("Sandbox")]
-        public static async Task<HttpResponseMessage> Run(
+        [FunctionName("Cats")]
+        public static async Task<HttpResponseMessage> GetCats(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
-
             string name = req.Query["name"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
 
-            var ret = String.IsNullOrEmpty(name) ? new Playground() : new Playground(name);
-            var json = JsonConvert.SerializeObject(ret, Formatting.Indented);
+            var scs = new SubjectCategorySet();
+            var cats = scs.GetCategories(name);
 
-            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(json,  Encoding.UTF8) };
+            var retObj = new
+            {
+                SubjectName = name,
+                Categories = cats
+            };
+            var json = JsonConvert.SerializeObject(retObj, Formatting.Indented);
+            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(json, Encoding.UTF8) };
         }
     }
 }
