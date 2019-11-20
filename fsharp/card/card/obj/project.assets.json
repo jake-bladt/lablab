@@ -631,12 +631,11 @@
       ]
     },
     "Microsoft.NETCore.Targets/2.0.0": {
-      "sha512": "rJJD/NPatfDry7SuNM7YvjqbJD9u1fs8h0hGI0nft0lnCFfEtPuX5N29Akja0ATbjQxzWn4P0s5gUSeOxEqROQ==",
+      "sha512": "odP/tJj1z6GylFpNo7pMtbd/xQgTC3Ex2If63dRTL38bBNMwsBnJ+RceUIyHdRBC0oik/3NehYT+oECwBhIM3Q==",
       "type": "package",
       "path": "microsoft.netcore.targets/2.0.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
@@ -648,7 +647,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "vRtn1Mn8jptwg5JrdPWvbpsnuyTleeLJEKEkGttif5zf4g6A7220DxpqjG/52UH0B0gMAr1AUBMmmQ2TbzsHTA==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -772,7 +771,8 @@
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
-        "netstandard.library.nuspec"
+        "netstandard.library.nuspec",
+        "paket-installmodel.cache"
       ]
     }
   },
@@ -783,33 +783,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jbladt\\.nuget\\packages\\": {},
+    "C:\\Users\\jake\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\code\\lablab\\fsharp\\card\\card\\card.fsproj",
+      "projectUniqueName": "D:\\code\\lablab\\fsharp\\card\\card\\card.fsproj",
       "projectName": "card",
-      "projectPath": "E:\\code\\lablab\\fsharp\\card\\card\\card.fsproj",
-      "packagesPath": "C:\\Users\\jbladt\\.nuget\\packages\\",
-      "outputPath": "E:\\code\\lablab\\fsharp\\card\\card\\obj\\",
+      "projectPath": "D:\\code\\lablab\\fsharp\\card\\card\\card.fsproj",
+      "packagesPath": "C:\\Users\\jake\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\lablab\\fsharp\\card\\card\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "D:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jbladt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\jake\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://dotnet.myget.org/F/roslyn/api/v3/index.json": {},
-        "https://tfs.transperfect.com/tfs/TransPort/_packaging/TransPerfect/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "card": {
+      "commandName": "Project",
+<<<<<<< HEAD
+      "commandLineArgs": "Ad"
+=======
+      "commandLineArgs": "Qd"
+>>>>>>> 1eccbe2d020a0eba803338fc3097258ca22f4626
+    }
+  }
+}
