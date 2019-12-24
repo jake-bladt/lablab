@@ -1,0 +1,6 @@
+{
+  "name": "movie-data-load",
+  "version": "1.0.0",
+  "description": "Loading data with d3",
+  "license": "ISC"
+}
