@@ -32,16 +32,24 @@
                 attr('cx', 200).
                 attr('r', 3);
 
-                lollipop.append('line').
+            lollipop.append('line').
                 attr('y1', 100).
                 attr('y2', 100).
                 attr('x2', 200).
                 style('stroke', 'black');
 
-                lollipop.append('circle').
+            lollipop.append('circle').
                 attr('cx', 200).
                 attr('cy', 100).
                 attr('r', 3);
+
+            lollipop.append('text').
+                attr('y', -10).
+                text('first element');
+
+            lollipop.append('text').
+                attr('y', 90).
+                text('second element');
 
         </script>
     </body>
