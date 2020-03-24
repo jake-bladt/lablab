@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println("Hello from", runtime.GOOS)
 }
-
