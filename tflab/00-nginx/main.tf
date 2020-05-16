@@ -2,12 +2,13 @@
 # VARIABLES
 ##################################################################################
 
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
+variable "aws_access_key_id" {}
+variable "aws_secret_access_key" {}
+
 variable "private_key_path" {}
 variable "key_name" {}
 variable "region" {
-  default = "us-east-1"
+  default = "us-west-2"
 }
 
 ##################################################################################
@@ -15,8 +16,8 @@ variable "region" {
 ##################################################################################
 
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
   region     = var.region
 }
 
@@ -54,8 +55,8 @@ resource "aws_default_vpc" "default" {
 
 }
 
-resource "aws_security_group" "allow_ssh" {
-  name        = "nginx_demo"
+resource "aws_security_group" "allow_ssh_to_nginx" {
+  name        = "nginx_demo_asg"
   description = "Allow ports for nginx demo"
   vpc_id      = aws_default_vpc.default.id
 
@@ -83,7 +84,7 @@ resource "aws_instance" "nginx" {
   ami                    = data.aws_ami.aws-linux.id
   instance_type          = "t2.micro"
   key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+  vpc_security_group_ids = [aws_security_group.allow_ssh_to_nginx.id]
 
   connection {
     type        = "ssh"
