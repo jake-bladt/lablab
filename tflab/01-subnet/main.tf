@@ -2,8 +2,8 @@
 # VARIABLES
 ##################################################################################
 
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
+variable "aws_access_key_id" {}
+variable "aws_secret_access_key" {}
 variable "private_key_path" {}
 variable "key_name" {}
 variable "region" {
@@ -15,14 +15,17 @@ variable "network_address_space" {
 variable "subnet1_address_space" {
   default = "10.1.0.0/24"
 }
+variable "subnet2_address_space" {
+  default = "10.1.1.0/24"
+}
 
 ##################################################################################
 # PROVIDERS
 ##################################################################################
 
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
   region     = var.region
 }
 
@@ -72,8 +75,15 @@ resource "aws_subnet" "subnet1" {
   cidr_block              = var.subnet1_address_space
   vpc_id                  = aws_vpc.vpc.id
   map_public_ip_on_launch = "true"
-  availability_zone       = data.aws_availability_zones.available.names[0]
+  availability_zone       = "us-west-2a"
+  # availability_zone       = "data.aws_availability_zones.available.names[0]"
+}
 
+resource "aws_subnet" "subnet1" {
+  cidr_block              = var.subnet2_address_space
+  vpc_id                  = aws_vpc.vpc.id
+  map_public_ip_on_launch = "true"
+  availability_zone       = "us-west-2b"
 }
 
 # ROUTING #
@@ -91,7 +101,35 @@ resource "aws_route_table_association" "rta-subnet1" {
   route_table_id = aws_route_table.rtb.id
 }
 
+resource "aws_route_table_association" "rta-subnet2" {
+  subnet_id      = aws_subnet.subnet2.id
+  route_table_id = aws_route_table.rtb.id
+}
+
 # SECURITY GROUPS #
+
+# Elastic load balancer group
+resource "aws_security_group" "elb-sg" {
+  name   = "nginx_elb_sg"
+  vpc_id = aws_vpc.vpc.id
+
+  #Allow HTTP from anywhere
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  #allow all outbound
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 # Nginx security group 
 resource "aws_security_group" "nginx-sg" {
   name   = "nginx_sg"
@@ -105,12 +143,12 @@ resource "aws_security_group" "nginx-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # HTTP access from anywhere
+  # HTTP access from the VPC
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.network_address_space]
   }
 
   # outbound internet access
@@ -147,10 +185,51 @@ resource "aws_instance" "nginx1" {
   }
 }
 
+resource "aws_instance" "nginx2" {
+  ami                    = data.aws_ami.aws-linux.id
+  instance_type          = "t2.micro"
+  subnet_id              = aws_subnet.subnet2.id
+  vpc_security_group_ids = [aws_security_group.nginx-sg.id]
+  key_name               = var.key_name
+
+  connection {
+    type        = "ssh"
+    host        = self.public_ip
+    user        = "ec2-user"
+    private_key = file(var.private_key_path)
+
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum install nginx -y",
+      "sudo service nginx start",
+      "echo '<html><head><title>Green Team Server</title></head><body style=\"background-color:#77A032\"><p style=\"text-align: center;\"><span style=\"color:#FFFFFF;\"><span style=\"font-size:28px;\">Green Team</span></span></p></body></html>' | sudo tee /usr/share/nginx/html/index.html"
+    ]
+  }
+}
+
+# LOAD BALANCER #
+resource "aws_elb" "web" {
+  name = "nginx-elb"
+
+  subnets         = [aws_subnet.subnet1.id, aws_subnet.subnet2.id]
+  security_groups = [aws_security_group.elb-sg.id]
+  instances       = [aws_instance.nginx1.id, aws_instance.nginx2.id]
+
+  listener {
+    instance_port     = 80
+    instance_protocol = "http"
+    lb_port           = 80
+    lb_protocol       = "http"
+  }
+}
+
+
 ##################################################################################
 # OUTPUT
 ##################################################################################
 
-output "aws_instance_public_dns" {
-  value = aws_instance.nginx1.public_dns
+output "aws_elb_public_dns" {
+  value = aws_elb.web.dns_name
 }
