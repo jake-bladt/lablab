@@ -3,8 +3,8 @@ Transform: AWS::Serverless-2016-10-31
 Description: HelloWorldLambdaJava
 
 Resources:
-
   HelloWorldLambda:
+    FunctionName: HelloWorldJava
     Type: AWS::Serverless::Function
     Properties:
       Runtime: java8
