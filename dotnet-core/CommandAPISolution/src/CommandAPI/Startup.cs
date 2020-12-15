@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using AutoMapper;
 using Npgsql;
 
 using CommandAPI.Data;
@@ -46,6 +47,7 @@ namespace CommandAPI
 
             services.AddDbContext<CommandContext>(opt => opt.UseNpgsql(builder.ConnectionString));
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<ICommandAPIRepo, PostgreSqlCommandApiRepo>();
         }
 
