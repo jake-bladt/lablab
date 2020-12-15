@@ -30,12 +30,34 @@ namespace CommandAPI.Controllers
             return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commands));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name="GetCommandById")]
         public ActionResult<CommandReadDto> GetCommandById(int id)
         {
             var command = _repository.GetCommandById(id);
             if(null == command) return NotFound();
             return Ok(_mapper.Map<CommandReadDto>(command));
+        }
+
+        [HttpPost]
+        public ActionResult<CommandReadDto> CreateCommand(CommandCreateDto createDto)
+        {
+            var cmd = _mapper.Map<Command>(createDto);
+            _repository.CreateCommand(cmd);
+            _repository.SaveChanges();
+
+            var ret = _mapper.Map<CommandReadDto>(cmd);
+            return CreatedAtRoute(nameof(GetCommandById), new { Id = ret.Id }, ret);
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult UpdateCommand(int id, CommandUpdateDto updateDto)
+        {
+            var cmdFromRepo = _repository.GetCommandById(id);
+            if(null == cmdFromRepo) return NotFound();
+            _mapper.Map(updateDto, cmdFromRepo);
+            _repository.UpdateCommand(cmdFromRepo);
+            _repository.SaveChanges();
+            return NoContent();
         }
     }
 }
