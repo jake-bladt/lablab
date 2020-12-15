@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,8 +22,16 @@ namespace CommandAPI
     {
         public IConfiguration Configuration { get; }
 
-        public Startup(IConfiguration config) 
+        public Startup(IWebHostEnvironment env) 
         {
+            var envName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Development";
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{envName}.json", optional: true)
+                .AddEnvironmentVariables()
+                .AddUserSecrets<Startup>()
+                .Build();
             Configuration = config;
         }
 
