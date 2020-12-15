@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 using AutoMapper;
@@ -56,6 +57,31 @@ namespace CommandAPI.Controllers
             if(null == cmdFromRepo) return NotFound();
             _mapper.Map(updateDto, cmdFromRepo);
             _repository.UpdateCommand(cmdFromRepo);
+            _repository.SaveChanges();
+            return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<CommandUpdateDto> patchDoc)
+        {
+            var cmdFromRepo = _repository.GetCommandById(id);
+            if(null == cmdFromRepo) return NotFound();
+            var cmdToPatch = _mapper.Map<CommandUpdateDto>(cmdFromRepo);
+            patchDoc.ApplyTo(cmdToPatch, ModelState);
+
+            if(!TryValidateModel(cmdToPatch)) return ValidationProblem(ModelState);
+            _mapper.Map(cmdToPatch, cmdFromRepo);
+            _repository.UpdateCommand(cmdFromRepo);
+            _repository.SaveChanges();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult CommandDelete(int id)
+        {
+            var cmdFromRepo = _repository.GetCommandById(id);
+            if(null == cmdFromRepo) return NotFound();
+            _repository.DeleteCommand(cmdFromRepo)            ;
             _repository.SaveChanges();
             return NoContent();
         }
