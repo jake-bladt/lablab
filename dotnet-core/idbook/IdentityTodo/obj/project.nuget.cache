@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IPj5Dowtbm2j2dEg4ZSo/+syPg7iU36fRpLX/KTG6r2N1/OwL3OodltYRUfQUn5tr8zbHAGBhfVn9aTfNhQUgA==",
+  "dgSpecHash": "10Ck1r3iIlVQyKwIFcqJNWXcONEwKEGlwQSzBBI9DKkI8xRekEQLHHPidT0GyHNCUi2yIgsV7sUhrsCwczt4fg==",
   "success": true,
   "projectFilePath": "E:\\code\\lablab\\dotnet-core\\idbook\\IdentityTodo\\IdentityTodo.csproj",
   "expectedPackageFiles": [
@@ -42,8 +42,7 @@
     "C:\\Users\\jake\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\jake\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\jake\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\jake\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\jake\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.7\\microsoft.netcore.app.host.win-x64.5.0.7.nupkg.sha512"
+    "C:\\Users\\jake\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }
