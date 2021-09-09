@@ -1,0 +1,12 @@
+E:\code\lablab\dotnet-core\EFSample\EFSample\bin\Debug\net6.0\EFSample.deps.json
+E:\code\lablab\dotnet-core\EFSample\EFSample\bin\Debug\net6.0\EFSample.dll
+E:\code\lablab\dotnet-core\EFSample\EFSample\bin\Debug\net6.0\ref\EFSample.dll
+E:\code\lablab\dotnet-core\EFSample\EFSample\bin\Debug\net6.0\EFSample.pdb
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\EFSample.csproj.AssemblyReference.cache
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\EFSample.GeneratedMSBuildEditorConfig.editorconfig
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\EFSample.AssemblyInfoInputs.cache
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\EFSample.AssemblyInfo.cs
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\EFSample.csproj.CoreCompileInputs.cache
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\EFSample.dll
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\ref\EFSample.dll
+E:\code\lablab\dotnet-core\EFSample\EFSample\obj\Debug\net6.0\EFSample.pdb

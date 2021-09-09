@@ -12,5 +12,6 @@ namespace IdentityTodo.Data
             : base(options)
         {
         }
+        public DbSet<TodoItem> TodoItems { get; set; }
     }
 }

@@ -1,0 +1,13 @@
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\bin\Debug\netcoreapp3.1\EF_Activity001.deps.json
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\bin\Debug\netcoreapp3.1\EF_Activity001.dll
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\bin\Debug\netcoreapp3.1\EF_Activity001.pdb
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\obj\Debug\netcoreapp3.1\EF_Activity001.AssemblyInfoInputs.cache
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\obj\Debug\netcoreapp3.1\EF_Activity001.AssemblyInfo.cs
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\obj\Debug\netcoreapp3.1\EF_Activity001.csproj.CoreCompileInputs.cache
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\obj\Debug\netcoreapp3.1\EF_Activity001.dll
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\obj\Debug\netcoreapp3.1\EF_Activity001.pdb
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\bin\Debug\netcoreapp3.1\EF_Activity001.runtimeconfig.json
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\bin\Debug\netcoreapp3.1\EF_Activity001.runtimeconfig.dev.json
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\obj\Debug\netcoreapp3.1\EF_Activity001.genruntimeconfig.cache
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\bin\Debug\netcoreapp3.1\appsettings.json
+E:\code\lablab\dotnet-core\efcore\EF_Activity001\EF_Activity001\obj\Debug\netcoreapp3.1\EF_Activity001.csproj.AssemblyReference.cache
