@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello, world!");
+    let clargs = std::env::args().skip(1);
 }
