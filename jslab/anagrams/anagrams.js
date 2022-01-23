@@ -5,9 +5,14 @@ let index = {};
 let lastWord;
 
 function indexEntry(pos, word) {
-  for(i = word.length - 1; i >= 0; i--) {
+  for(i = 1; i <= word.length; i++) {
       let wordStart = word.substring(0, i);
-      console.log(wordStart);
+      if(index[wordStart]) {
+
+      } else {
+        index[wordStart] = { "start": pos, "end": pos };
+        console.log(`Index of ${wordStart} starts at ${pos} on word ${dictionary[pos]}`);
+      }
   }
 }
 
@@ -19,8 +24,8 @@ fetch(
 ).then(
     (text) => {
       dictionary = (new String(text)).split('\n');
-      for(const w in dictionary) {
-        indexEntry(0, w);
+      for(const n in dictionary) {
+        indexEntry(n, dictionary[n]);
       }
 });
 
