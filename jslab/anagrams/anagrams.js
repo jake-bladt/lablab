@@ -1,18 +1,18 @@
-console.log('Script loaded.');
-
 let dictionary;
-let index = {};
 let lastWord;
+let index = {};
+
+let sortLetters = (word) => word.split("").sort().join("");
 
 function indexEntry(pos, word) {
   for(i = 1; i <= word.length; i++) {
       let wordStart = word.substring(0, i);
       if(index[wordStart]) {
         index[wordStart].end = pos;
-        console.log(`Index of ${wordStart} ends at ${pos} on word ${dictionary[pos]}`);
+        // console.log(`Index of ${wordStart} ends at ${pos} on word ${dictionary[pos]}`);
       } else {
         index[wordStart] = { "start": pos, "end": pos };
-        console.log(`Index of ${wordStart} starts at ${pos} on word ${dictionary[pos]}`);
+        // console.log(`Index of ${wordStart} starts at ${pos} on word ${dictionary[pos]}`);
       }
   }
 }
@@ -31,17 +31,26 @@ fetch(
 });
 
 function onInput(input) {
-  const word = input.value
+  const sortedLetters =  sortLetters(input.value);
+  const ndx = index[sortedLetters];
+
+  if(ndx) {
+      console.log(`Words starting with ${sortedLetters}:`);
+      for(i = ndx.start; i <= ndx.end; i++) {
+          console.log(dictionary[i]);
+      }
+  }
+
   const o = []
 
-  for (let word2 of (dictionary || [])) {
+//  for (let word2 of (dictionary || [])) {
     // sort each word for comparison
-    const sortedWord = word.split("").sort().join("")
-    const sortedWord2 = word2.split("").sort().join("")
-    if (sortedWord == sortedWord2) {
-      o.push(word2)
-    }
-  }
+//    const sortedWord = word.split("").sort().join("")
+//    const sortedWord2 = word2.split("").sort().join("")
+//    if (sortedWord == sortedWord2) {
+//      o.push(word2)
+//    }
+// }
 
   document.getElementById('output').innerHTML = JSON.stringify(o, null, 2)
 }
