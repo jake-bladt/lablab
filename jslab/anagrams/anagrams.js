@@ -8,7 +8,8 @@ function indexEntry(pos, word) {
   for(i = 1; i <= word.length; i++) {
       let wordStart = word.substring(0, i);
       if(index[wordStart]) {
-
+        index[wordStart].end = pos;
+        console.log(`Index of ${wordStart} ends at ${pos} on word ${dictionary[pos]}`);
       } else {
         index[wordStart] = { "start": pos, "end": pos };
         console.log(`Index of ${wordStart} starts at ${pos} on word ${dictionary[pos]}`);
@@ -24,7 +25,7 @@ fetch(
 ).then(
     (text) => {
       dictionary = (new String(text)).split('\n');
-      for(const n in dictionary) {
+      for(n = 0; n < dictionary.length; n++) {
         indexEntry(n, dictionary[n]);
       }
 });
