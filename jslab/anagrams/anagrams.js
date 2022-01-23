@@ -12,7 +12,9 @@ function scanWord(word, found) {
   let i = 1;
   while(i <= word.length) {
     const wordStart = word.substring(0, i);
-    if(index[wordStart]) { i++ } else {
+    if(index[wordStart]) { 
+        i++;
+     } else {
       console.log(`scan for ${word} stops at ${wordStart}`);
       i = word.length + 1; // create stop condition
     }
