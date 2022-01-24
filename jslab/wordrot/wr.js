@@ -4,11 +4,13 @@ function setNextAlpha(word) {
     let pos, firstLetter, secondLetter;
   
     // Starting from the end of the word, find two letters that are in alphabetical order.
-    for(pos = word.length - 1; pos > 0; pos++) {
+    for(pos = word.length - 1; pos > 0; pos--) {
       firstLetter = word[pos - 1];
       secondLetter = word[pos];
+      // console.log(`Letters are [${firstLetter}, ${secondLetter}]`);
       if(firstLetter < secondLetter) {
         revOrderPos = pos - 1;
+        // console.log(`revOrderPos = ${revOrderPos}`);
         break;
       } 
     }
@@ -19,7 +21,7 @@ function setNextAlpha(word) {
     // Special case: first letter needs swap
     if(revOrderPos === 0) {
       let lastLetter = word.substring(word.length - 1);
-      let everythingElse = word.substring(0, word.length - 2);
+      let everythingElse = word.substring(0, word.length - 1);
       return `${lastLetter}${everythingElse}`;
     }
   
