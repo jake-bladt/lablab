@@ -1,3 +1,7 @@
+"use strict";
+
+let sortLetters = (word) => word.split("").sort().join("");
+
 function setNextAlpha(word) {
 
     let revOrderPos = -1;
@@ -10,7 +14,6 @@ function setNextAlpha(word) {
       // console.log(`Letters are [${firstLetter}, ${secondLetter}]`);
       if(firstLetter < secondLetter) {
         revOrderPos = pos - 1;
-        // console.log(`revOrderPos = ${revOrderPos}`);
         break;
       } 
     }
@@ -20,9 +23,9 @@ function setNextAlpha(word) {
   
     // Special case: first letter needs swap
     if(revOrderPos === 0) {
-      let lastLetter = word.substring(word.length - 1);
-      let everythingElse = word.substring(0, word.length - 1);
-      return `${lastLetter}${everythingElse}`;
+      let startsWith = word.substring(0, 1);
+      console.log(startsWith);
+      return false;
     }
   
     let before = word.substring(0, revOrderPos);
