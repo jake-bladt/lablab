@@ -84,7 +84,6 @@ fetch(
 function onInput(input) {
   const o = []
   let candidate = sortLetters(input.value);
-  scanWord(candidate, o);
-
+  while(setNextAlpha(candidate)) { console.log(candidate) };
   document.getElementById('output').innerHTML = JSON.stringify(o, null, 2)
 }
