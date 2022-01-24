@@ -1,7 +1,6 @@
 "use strict";
 
 let dictionary;
-let lastWord;
 let index = {};
 
 let sortLetters = (word) => word.split("").sort().join("");
