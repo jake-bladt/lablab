@@ -18,23 +18,22 @@ function setNextAlpha(word) {
   
     // Special case: first letter needs swap
     if(revOrderPos === 0) {
-      // break here for now while I figure out the happy path.
-      return false;
-  
+      let lastLetter = word.substring(word.length - 1);
+      let everythingElse = word.substring(0, word.length - 2);
+      return `${lastLetter}${everythingElse}`;
     }
   
     let before = word.substring(0, revOrderPos);
     let after = word.substring(revOrderPos + 2);
     
-    word = `${before}${secondLetter}${firstLetter}${after}`;
+    return `${before}${secondLetter}${firstLetter}${after}`;
   
     // Special case: duplicate letters?
-    return true;
   }
 
 
 let word = process.argv[2];
 
-while(setNextAlpha(word)) {
+while(word = setNextAlpha(word)) {
   console.log(word);
 }
