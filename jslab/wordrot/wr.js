@@ -33,7 +33,7 @@ function setNextAlpha(word) {
   }
 
 
-let word = process.argv[1];
+let word = process.argv[2];
 
 while(setNextAlpha(word)) {
   console.log(word);
