@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'WW=^..^=D?';
   description = "What Would Tom Frost Do?";
+  hero = 'Howard T. Duck';
 }
