@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'WW=^..^=D?';
-  description = "What Would Tom Frost Do?";
   hero = 'Howard T. Duck';
+
+  onLike() {
+    window.alert(`I like ${this.hero}!`);
+  }
 }

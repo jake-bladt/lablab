@@ -1,1 +1,9 @@
-<app-hero [name]="hero"></app-hero>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First App</title>
+  </head>
+  <body>
+    <app-hero [name]="hero" (liked)="onLike()"></app-hero>
+  </body>
+</html>
